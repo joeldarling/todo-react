@@ -1,13 +1,13 @@
 module.exports = {
   setTodos: function(todos){
-    if(Array.isArray(todos)){
+    if(Array.isArray(todos) && todos.length > 0){
       localStorage.setItem('todos', JSON.stringify(todos));
       return todos;
     }
   },
   getTodos: function(){
-    let stringTodos = localStorage.getItem('todos');
-    let todos = [];
+    var stringTodos = localStorage.getItem('todos');
+    var todos = [];
 
     try {
       todos = JSON.parse(stringTodos);
