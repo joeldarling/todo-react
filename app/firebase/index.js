@@ -3,10 +3,10 @@ import firebase from 'firebase';
 try {
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyA_5S4tJ51w95YJdmuXLdZ9QQscYB0hBl8",
-    authDomain: "darling-todo-app.firebaseapp.com",
-    databaseURL: "https://darling-todo-app.firebaseio.com",
-    storageBucket: "darling-todo-app.appspot.com",
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DATABASE_URL,
+    storageBucket: process.env.STORAGE_BUCKET,
   };
 
   firebase.initializeApp(config);
