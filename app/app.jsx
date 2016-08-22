@@ -7,14 +7,7 @@ const store = require('configureStore').configure();
 const actions = require('actions');
 const TodoAPI = require('TodoAPI');
 
-store.subscribe(()=>{
-  const state = store.getState();
-  TodoAPI.setTodos(state.todos);
-});
-
-const initialTodos = TodoAPI.getTodos();
-
-store.dispatch(actions.addTodos(initialTodos));
+store.dispatch(actions.startAddTodos());
 
 // Load foundation
 $(document).foundation();
