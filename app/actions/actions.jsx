@@ -96,7 +96,7 @@ export const startLogin = () => {
   return(dispatch, getState) => {
     return firebase.auth().signInWithPopup(githubProvider)
     .then((result)=>{
-      console.log('auth work', result);
+
     })
     .catch((e)=>{
       console.log('auth error', e);
